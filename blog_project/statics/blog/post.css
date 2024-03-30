@@ -1,0 +1,100 @@
+.content {
+    color:black;
+    width: 60%;
+    float: left;
+    padding: 0 0 0 30px;
+    background-color: white;
+    max-height: 100%;
+    font-family: 'Times New Roman', Times, serif;
+    /* border-right: 2px solid black; */
+}
+
+ .sidebar {
+    background-color: rgb(241, 239, 239);
+     width: 38%; 
+    float: right;
+    height: 100vh;
+    padding-right: 10px;
+} 
+
+h1 {
+    background-color: rgb(48, 46, 46);
+    color: aliceblue;
+    font-family: cursive;
+    text-align: center;
+    border-bottom: 1px solid yellow;
+    margin-bottom: 10px;
+}
+
+h2 {
+    text-align: center;
+    background-color: rgb(48, 46, 46);
+    font-family: cursive;
+    color: aliceblue;
+
+}
+h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(25, 115, 175);
+    font-weight:600;
+    text-align: center;
+}
+a {
+    text-decoration: none;
+    position: relative;
+}
+a::after {
+    content: ''; /* Required for pseudo-element */
+    position: absolute; /* Position absolute to overlay */
+    left: 0; /* Align to the left of the element */
+    bottom: -2px; /* Adjust as needed for spacing */
+    width: 100%; /* Full width of the element */
+    height: 2px; /* Thickness of the underline */
+    background-color: #007bff; /* Color of the underline */
+    visibility: hidden; /* Hide by default */
+    transform: scaleX(0); /* Initially scale to zero width */
+    transition: all 0.3s ease-in-out; /* Add smooth transition */
+  }
+  a:hover::after {
+    visibility: visible; /* Show the underline on hover */
+    transform: scaleX(1); /* Scale the underline to full width */
+  }
+.detail {
+    font-style: italic;
+    text-align: center;
+    font-weight: 300;
+    border-bottom: 1px solid black;
+}
+.tagg {
+   font-size: larger; 
+}
+.main {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: larger;
+    font-weight:500
+
+}
+.count {
+    font-size: x-large;
+    color: #8aafd6;
+    padding-left: 10px;
+}
+h5 {
+    color: #0957aa;
+}
+h4 {
+    color: #0957aa;  
+    padding-left: 10px;
+}
+#cmnt {
+    background-color: #8bafd4;
+    color: aliceblue;
+    width: fit-content;
+    font-weight: bold;
+    font-size: large;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#head {
+    font-weight: bold;
+    color:rgb(26, 94, 182);
+}

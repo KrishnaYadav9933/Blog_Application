@@ -1,0 +1,28 @@
+{% extends 'blog/base.html' %}
+
+{% block title_block %}
+    Blog App
+{% endblock %}
+
+{% block content %}
+
+    <h1>Blog Application</h1>
+    {% if tag %}
+    <h3>Post tagged with '{{tag.name}}'</h3>
+    {% endif %}
+    {% for post in post_list %}
+    <a href="{{post.get_absolute_url}}"><h3>{{post.title}}</h3></a>
+    <p class="detail">Published on {{post.publish}} by {{post.author | title}}</p>
+    <p class=" tagg">Tags: 
+        {% for tag in post.tag.all %}
+       <a href="{% url 'post_list_by_tag_name' tag.slug %}">{{tag.name}}</a>
+          {% if not forloop.last %},{%endif%}
+        {% endfor %} 
+    </p>
+    <div class="main">{{post.body|truncatewords:30|linebreaks}}</div>
+    {% endfor %}
+
+    {% include 'blog/paginator.html' with page=post_list %}
+
+{% endblock %}
+
